@@ -24,6 +24,8 @@ rm -r protoc-3.19.3-linux-x86_64.zip
 cd ../research
 ../protoc/bin/protoc object_detection/protos/*.proto --python_out=.
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+cp object_detection/packages/tf2/setup.py .
+python3 -m pip install --use-feature=202-resolver .
 ```
 
 ## Inference
