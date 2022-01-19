@@ -3,13 +3,15 @@
 
 ## Installation
 ```
-mkdir -p NeuroFind/Faster_R-CNN
+git clone https://github.com/Anxum/NeuroFind.git
 cd NeuroFind
-git clone https://github.com/ultralytics/yolov5.git
+git clone https://github.com/ultralytics/yolov5.git temp
+mv temp/.git yolov5/.git
+rm -rf temp
 cd yolov5
 pip3 install -r requirements.txt  # install
 cd ../.. 
-git clone https://github.com/Anxum/NeuroFind.git
+
 ```
 
 ## Inference
