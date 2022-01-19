@@ -2,6 +2,8 @@
 **A solution to the to the Task given by the Oberseminar of Messtechnik Institute of TU Dresden in 2021**
 
 ## Installation
+please install on a linux operating system
+
 ```
 git clone https://github.com/Anxum/NeuroFind.git
 cd NeuroFind
