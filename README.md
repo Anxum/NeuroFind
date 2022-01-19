@@ -18,6 +18,7 @@ git clone https://github.com/tensorflow/models.git
 pip3 install lxml
 mkdir models/protoc
 mv protoc-3.19.3-linux-x86_64.zip models/protoc
+cd models/protoc
 unzip protoc-3.19.3-linux-x86_64.zip
 rm -r protoc-3.19.3-linux-x86_64.zip
 cd ../research
