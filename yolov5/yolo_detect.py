@@ -1,6 +1,6 @@
 from stitch import stitch
 from slice_os import slice_img
-from detect import main
+from inference_yolo import main
 import argparse
 from display import disp
 import os
