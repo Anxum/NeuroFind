@@ -25,7 +25,7 @@ cd ../research
 ../protoc/bin/protoc object_detection/protos/*.proto --python_out=.
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 cp object_detection/packages/tf2/setup.py .
-python3 -m pip install --use-feature=202-resolver .
+python3 -m pip install --use-feature=2020-resolver .
 ```
 
 ## Inference
