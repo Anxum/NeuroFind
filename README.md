@@ -7,6 +7,7 @@ git clone https://github.com/Anxum/NeuroFind.git
 cd NeuroFind
 git clone https://github.com/ultralytics/yolov5.git temp
 mv temp/.git yolov5/.git
+mv temp/* yolov5
 rm -rf temp
 cd yolov5
 pip3 install -r requirements.txt  # install
