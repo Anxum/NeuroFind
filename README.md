@@ -11,7 +11,12 @@ mv temp/* yolov5
 rm -rf temp
 cd yolov5
 pip3 install -r requirements.txt  # install
-cd ../.. 
+cd ../Faster_R-CNN
+git clone https://github.com/tensorflow/models.git
+pip3 install pillow
+pip3 install lxml
+pip3 install jupyter
+pip3 install malplotlib
 
 ```
 
