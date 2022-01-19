@@ -13,15 +13,14 @@ cd yolov5
 pip3 install -r requirements.txt  # install
 cd ../Faster_R-CNN
 git clone https://github.com/tensorflow/models.git
-pip3 install pillow
 pip3 install lxml
-pip3 install jupyter
-pip3 install malplotlib
 mkdir models/protoc
 mv protoc-3.19.3-linux-x86_64.zip models/protoc
 unzip protoc-3.19.3-linux-x86_64.zip
 rm -r protoc-3.19.3-linux-x86_64.zip
-
+cd ../research
+../protoc/bin/protoc object_detection/protos/*.proto --python_out=.
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 
 ## Inference
