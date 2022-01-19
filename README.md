@@ -8,6 +8,8 @@ cd NeuroFind
 git clone https://github.com/ultralytics/yolov5.git
 cd yolov5
 pip3 install -r requirements.txt  # install
+cd ../.. 
+git clone https://github.com/Anxum/NeuroFind.git
 ```
 
 ## Inference
