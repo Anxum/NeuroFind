@@ -17,6 +17,10 @@ pip3 install pillow
 pip3 install lxml
 pip3 install jupyter
 pip3 install malplotlib
+mkdir models/protoc
+mv protoc-3.19.3-linux-x86_64.zip models/protoc
+unzip protoc-3.19.3-linux-x86_64.zip
+rm -r protoc-3.19.3-linux-x86_64.zip
 
 ```
 
