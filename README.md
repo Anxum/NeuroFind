@@ -3,9 +3,11 @@
 
 ## Installation
 ```
-mkdir -p NeuroFind/{yolov5,Faster_R-CNN}
+mkdir -p NeuroFind/Faster_R-CNN
+cd NeuroFind
 git clone https://github.com/ultralytics/yolov5.git
-
+cd yolov5
+pip3 install -r requirements.txt  # install
 ```
 
 ## Inference
