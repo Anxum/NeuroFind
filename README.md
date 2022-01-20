@@ -1,6 +1,8 @@
 # NeuroFind
 **A solution to the to the Task given by the Oberseminar of Messtechnik Institute of TU Dresden in 2021**
 
+![alt text](https://github.com/Anxum/NeuroFind/blob/main/Images/results/det_0917_36538.png?raw=true)
+
 ## Installation
 _please install on a linux operating system_
 
