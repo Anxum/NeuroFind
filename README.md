@@ -87,8 +87,33 @@ python3 yolo_detect.py
 ```
 
 Possible arguments include:
-| Argument | Description | Input format | Default Value |
+| Argument | Description | Input format | Default Value | Comment |
 |---|---|---|---|
+| --weights | 
+| --source |
+| --conf-thres |
+| --iou-thres |
+| --max-det |
+| --device |
+| --nosave|
+| --project|
+| --name|
+| --line-thickness|
+
+
+Arguments that are not testet or will not work or should not be specified
+| Not testet | Will not work| Please don't use|
+|---|---|---|
+| --exist-ok| --visualize | --hide labels |
+| --classes | --view-img| --hide-conf|
+| -- half || --save-conf|
+| --dnn || --imgsz|
+| --update|
+| --augment |
+| --agnostic-nms |
+| --save-txt|
+
+
 ### Faster R-CNN
 
 ## Training
