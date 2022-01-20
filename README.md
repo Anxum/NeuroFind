@@ -96,7 +96,7 @@ Possible arguments include:
 | --conf-thres | minimal value of confidence for bounding boxes| float, [0..1]|0.25||
 | --device | Specify the device to run Inference| 0,1,2,3,..., cpu for CPU | ||
 | --nosave| Don't save the images after inference| | False||
-| --project| Save to project/name| OS_Path|./runs/detect||
+| --project| Save to project/name| OS_PATH|./runs/detect||
 | --name| Save to project/name| str | exp||
 | --line-thickness|Thickness of lines of bounding boxes on the image|int|2||
 
