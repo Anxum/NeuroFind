@@ -29,6 +29,7 @@ cd ../research
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 cp object_detection/packages/tf2/setup.py .
 python3 -m pip install --use-feature=2020-resolver .
+cd ../../../..
 ```
 
 ### Only Install Yolov5
@@ -41,6 +42,7 @@ mv temp/* yolov5
 rm -rf temp
 cd yolov5
 pip3 install -r requirements.txt 
+cd ../..
 ```
 
 ### Only Install Faster R-CNN
@@ -59,6 +61,7 @@ cd ../research
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 cp object_detection/packages/tf2/setup.py .
 python3 -m pip install --use-feature=2020-resolver .
+cd ../../../..
 ```
 ### Weights
 
@@ -76,10 +79,21 @@ If you choose to put the weights into another folder you must refer to these pat
 
 
 ## Inference
+Please download weigts first as described above or train the network yourself before Inference
 ### YOLOv5
+For Inference please run (from _NeuroFind/yolov5_)
+```
+python3 yolo_detect.py
+```
+
+Possible arguments include:
+| Argument | Description | Input format | Default Value |
+|---|---|---|---|
 ### Faster R-CNN
 
 ## Training
 ### YOLOv5
+For training, please refer to: https://github.com/ultralytics/yolov5.git
 ### Faster R-CNN
+For training, please refer to: https://github.com/tensorflow/models.git
 
