@@ -104,7 +104,7 @@ Arguments that are not testet or will not work or should not be specified
 |---|---|---|
 | --exist-ok| --visualize | --hide labels |
 | --classes | --view-img| --hide-conf|
-| -- half || --save-conf|
+| --half || --save-conf|
 | --dnn || --imgsz|
 | --update|| --save-txt|
 | --augment |
