@@ -46,7 +46,7 @@ pip3 install -r requirements.txt
 Only Install Faster R-CNN
 ```
 git clone https://github.com/Anxum/NeuroFind.git
-cd Faster_R-CNN
+cd NeuroFind/Faster_R-CNN
 git clone https://github.com/tensorflow/models.git
 pip3 install lxml
 mkdir models/protoc
