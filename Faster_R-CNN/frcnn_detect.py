@@ -8,7 +8,7 @@ import shutil
 
 def run(opt): 
     print(vars(opt))
-    src, out, checkpt, config, labelmap, confth, del_img = opt.source, opt.output, opt.checkpt, opt.config, opt.labelmap, opt.conf_thres, opt.delete_image
+    src, out, checkpt, config, labelmap, confth, del_img, thickness = opt.source, opt.output, opt.checkpt, opt.config, opt.labelmap, opt.conf_thres, opt.nosave, opt.line_thickness
     
     print('slicing...')
     if src[len(src)-1] =='/':
@@ -32,7 +32,7 @@ def run(opt):
     print('deleting sliced images..')
     print('displaying images...')
     if not del_img:
-        disp(src,f'{out}/bboxes', f'{out}/images')
+        disp(src,f'{out}/bboxes', f'{out}/images', thick = thickness)
         print(f'images saved to {out}/image')
     #delete unneeded data for next detection session
     try: 
@@ -47,8 +47,9 @@ if __name__ =='__main__':
     parser.add_argument('--config', type=str, default='./export/pipeline.config', help='path to config')
     parser.add_argument('--checkpt', type=str, default='./export/checkpoint/ckpt-0', help='path to checkpoint')
     parser.add_argument('--labelmap', type=str, default="./export/label_map.pbtxt", help='path to label map')
-    parser.add_argument('--output', type=str, default='./runs/detect', help='path to output folder')
+    parser.add_argument('--output', type=str, default='./runs/detect/exp', help='path to output folder')
     parser.add_argument('--conf-thres', type=float, default=0.25, help='confidence threshold') 
-    parser.add_argument('--delete-image', action='store_true', help='dont save the image')
+    parser.add_argument('--nosave', action='store_true', help='dont save the image')
+    parser.add_argument('--line-thickness', type=int, default = 2, help = 'thickness of lines of bounding boxes')
     opt = parser.parse_args()
     run(opt)

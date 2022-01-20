@@ -12,6 +12,8 @@ def detect(opt):
     print('slicing...')
     slice_img(opt.source, './cache/cropped_images', './cache/xml_out')
     img_source = opt.source
+    nosave = opt.nosave
+    opt.nosave = True
     opt.source = './cache/cropped_images'
     out = f'{opt.project}/{opt.name}'
     test_out = out
@@ -27,9 +29,10 @@ def detect(opt):
     print('stitching...')
     stitch(f'{root_to_labels}/labels', './cache/xml_out', 'yolo', f'{out}/bboxes')
     print('deleting sliced images..')
-    print('displaying images...')
-    disp(img_source,f'{out}/bboxes', f'{out}/images')
-    print(f'images saved to {out}/image')
+    if not (nosave):
+        print('displaying images...')
+        disp(img_source,f'{out}/bboxes', f'{out}/images', thick = opt.line_thickness)
+        print(f'images saved to {out}/image')
     #delete unneeded data for next detection session
     try: 
         shutil.rmtree('./cache')
@@ -60,7 +63,7 @@ if __name__ == '__main__':
     parser.add_argument('--project', default='./runs/detect', help='save results to project/name')
     parser.add_argument('--name', default='exp', help='save results to project/name')
     parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
-    parser.add_argument('--line-thickness', default=3, type=int, help='bounding box thickness (pixels)')
+    parser.add_argument('--line-thickness', default=2, type=int, help='bounding box thickness (pixels)')
     parser.add_argument('--hide-labels', default=False, action='store_true', help='hide labels')
     parser.add_argument('--hide-conf', default=False, action='store_true', help='hide confidences')
     parser.add_argument('--half', action='store_true', help='use FP16 half-precision inference')
