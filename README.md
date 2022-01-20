@@ -88,7 +88,7 @@ python3 yolo_detect.py
 
 Possible arguments include:
 | Argument | Description | Input format | Default Value |Comment|
-|---|---|---|---|
+|---|---|---|---|---|
 | --weights | Put path to weights | OS_PATH | ./runs/train/weights/best.pt | |
 | --source | path to file or dir | OS_PATH | ../Images | URL, glob and webcam(0) could be possible, not tested|
 | --conf-thres | minimal value of confidence for bounding boxes| float, [0..1]|0.25||
