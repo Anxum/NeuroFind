@@ -96,7 +96,7 @@ Possible arguments include:
 | --nosave| Don't save the images after inference| | False||
 | --project| Save to project/name| OS_Path|./runs/detect||
 | --name| Save to project/name| str | exp||
-| --line-thickness|Thickness of lines on the image|int|2||
+| --line-thickness|Thickness of lines of bounding boxes on the image|int|2||
 
 
 Arguments that are not testet or will not work or should not be specified
@@ -114,7 +114,22 @@ Arguments that are not testet or will not work or should not be specified
 
 
 ### Faster R-CNN
+For Inference please run (from _NeuroFind/Faster_R-CNN_)
+```
+python3 frcnn_detect.py
+```
 
+Possible arguments include:
+| Argument | Description | Input format | Default Value |
+|---|---|---|---|
+| --config | Put path to config | OS_PATH | ./export/pipeline.config' | 
+| --source | path to file or dir | OS_PATH | ../Images | 
+| --checkpt | Path to checkpoint | OS_PATH |./export/checkpoint/ckpt-0|
+| --labelmap | Path to labelmap | OS_PATH | ./export/label_map.pbtxt|
+| --conf-thres | minimal value of confidence for bounding boxes| float, [0..1]|0.25|
+| --output | Save files to this path| OS_PATH |./runs/detect/exp|
+| --nosave| Don't save the images after inference| | False|
+| --line-thickness|Thickness of lines of bounding boxes on the image|int|2|
 ## Training
 ### YOLOv5
 For training, please refer to: https://github.com/ultralytics/yolov5.git
