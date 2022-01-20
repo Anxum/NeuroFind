@@ -134,7 +134,7 @@ Possible arguments include:
 | --line-thickness|Thickness of lines of bounding boxes on the image|int|2|
 ## Training
 ### YOLOv5
-to create a test dataset please use( in _NeuroFind/training_data_yolo_):
+to create a training dataset please use( in _NeuroFind/training_data_yolo_):
 ```
 python3 crop_image.py
 ```
