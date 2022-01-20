@@ -104,7 +104,7 @@ Arguments that are not testet or will not work or should not be specified
 |---|---|---|
 | --exist-ok| --visualize | --hide labels |
 | --classes | --view-img| --hide-conf|
-| -- half || --save-conf|
+| --half || --save-conf|
 | --dnn || --imgsz|
 | --update|| --save-txt|
 | --augment |
@@ -132,6 +132,10 @@ Possible arguments include:
 | --line-thickness|Thickness of lines of bounding boxes on the image|int|2|
 ## Training
 ### YOLOv5
+to create a test dataset please use( in _NeuroFind/training_data_yolo_):
+```
+python3 crop_image.py
+```
 For training, please refer to: https://github.com/ultralytics/yolov5.git
 ### Faster R-CNN
 For training, please refer to: https://github.com/tensorflow/models.git
