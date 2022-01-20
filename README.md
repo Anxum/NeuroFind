@@ -101,7 +101,7 @@ Possible arguments include:
 | --line-thickness|Thickness of lines of bounding boxes on the image|int|2||
 
 
-Arguments that are not testet or will not work or should not be specified
+Arguments that are not tested or will not work or should not be specified
 | Not testet | Will not work| Please don't use|
 |---|---|---|
 | --exist-ok| --visualize | --hide labels |
