@@ -87,18 +87,16 @@ python3 yolo_detect.py
 ```
 
 Possible arguments include:
-| Argument | Description | Input format | Default Value | Comment |
+| Argument | Description | Input format | Default Value |Comment|
 |---|---|---|---|
-| --weights | 
-| --source |
-| --conf-thres |
-| --iou-thres |
-| --max-det |
-| --device |
-| --nosave|
-| --project|
-| --name|
-| --line-thickness|
+| --weights | Put path to weights | OS_PATH | ./runs/train/weights/best.pt | |
+| --source | path to file or dir | OS_PATH | ../Images | URL, glob and webcam(0) could be possible, not tested|
+| --conf-thres | minimal value of confidence for bounding boxes| float, [0..1]|0.25||
+| --device | Specify the device to run Inference| 0,1,2,3,..., cpu for CPU | ||
+| --nosave| Don't save the images after inference| | False||
+| --project| Save to project/name| OS_Path|./runs/detect||
+| --name| Save to project/name| str | exp||
+| --line-thickness|Thickness of lines on the image|int|2||
 
 
 Arguments that are not testet or will not work or should not be specified
@@ -108,10 +106,11 @@ Arguments that are not testet or will not work or should not be specified
 | --classes | --view-img| --hide-conf|
 | -- half || --save-conf|
 | --dnn || --imgsz|
-| --update|
+| --update|| --save-txt|
 | --augment |
 | --agnostic-nms |
-| --save-txt|
+| --iou-thres |
+| --max-det |
 
 
 ### Faster R-CNN
