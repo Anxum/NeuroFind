@@ -124,7 +124,7 @@ python3 frcnn_detect.py
 Possible arguments include:
 | Argument | Description | Input format | Default Value |
 |---|---|---|---|
-| --config | Put path to config | OS_PATH | ./export/pipeline.config' | 
+| --config | Put path to config | OS_PATH | ./export/pipeline.config | 
 | --source | path to file or dir | OS_PATH | ../Images | 
 | --checkpt | Path to checkpoint | OS_PATH |./export/checkpoint/ckpt-0|
 | --labelmap | Path to labelmap | OS_PATH | ./export/label_map.pbtxt|
